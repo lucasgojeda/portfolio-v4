@@ -19,5 +19,8 @@ jobs:
       - name: Build the Docker image
         run: docker build -t portfoliov4 .
 
+      - name: Tag docker image
+        run: docker tag portfoliov4 lucasgojeda/portfoliov4:latest
+
       - name: Push to DockerHub
         run: docker push lucasgojeda/portfoliov4:latest
